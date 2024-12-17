@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://kit.fontawesome.com/283daa4351.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="icon" href="static/images/Logo-la-esquina-del-pana.ico">
@@ -23,14 +24,25 @@
                     <li><a href="templates/productos.html#prod">PRODUCTOS</a></li>
                     <li><a href="templates/sobre-nosotros.html#sn">SOBRE NOSOTROS</a></li>
                     <li><a href="templates/contactanos.html#ct">CONTÁCTANOS</a></li>
+                    <button id="carritoBtn" class="carrito-btn">CARRITO (0)</button>
                 </ul>
-
             <a href="https://wa.link/2sgzlv" class="action_btn" target="_blank">HACE TU PEDIDO</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-
+    <!-- Modal Carrito de compras -->
+    <div id="modalCarrito" class="modal">
+        <div class="modal-content">
+            <span id="cerrarModal" class="cerrar">&times;</span>
+            <h2>Carrito</h2>
+            <div id="mensajeVacio" class="mensaje-vacio">El carrito está vacío :(</div>
+            <div id="productosCarrito" class="productos-carrito"></div>
+            <div id="productosDisponibles" class="productos-disponibles"></div>
+            <button id="borrarCarrito">Borrar Carrito</button>
+            <button id="enviarPedido">Enviar Pedido</button>
+        </div>
+    </div>
     <!-- Menu hamburguesa desplegable -->
         <div class="dropdown_menu">
             <ul>
@@ -42,29 +54,24 @@
             </ul>
         </div>
     </header>
-
     <main>
         <section id="description">
             <h1>Somos la Esquina del Pana</h1>
             <p>Tu lugar de confianza para encontrar cortes frescos, de calidad y con el sabor auténtico que solo un buen carnicero sabe ofrecer.</p>
             <p>Nos especializamos en brindar productos seleccionados con esmero, siempre frescos y listos para llevar a tu mesa</p>
-
         </section>
     </main>
-
     <!-- Slider -->
     <div class="slider">
         <ul>
-            <li><img src="static/images/slider/1.png" alt="imagen1"></li>
-            <li><img src="static/images/slider/2.jpg" alt="imagen2"></li>
-            <li><img src="static/images/slider/3.jpg" alt="imagen3"></li>
+            <li><img src="static/images/slider/1.png" alt="Imagen 1 Slider"></li>
+            <li><img src="static/images/slider/2.jpg" alt="Imagen 2 Slider"></li>
+            <li><img src="static/images/slider/3.jpg" alt="Imagen 3 Slider"></li>
         </ul>
     </div>
-
     <section class="main-title-ix">
         <h1>- NUESTROS CLIENTES -</h1>
     </section>
-
     <!-- Reviews -->
     <div class="container swiper">
         <div class="slider-wrapper">
@@ -82,7 +89,6 @@
                         <span class="material-symbols-outlined">star</span>
                     </div>
                 </div>
-
     <!-- Review 2 -->
                 <div class="card-item swiper-slide">
                     <img src="static/images/reseñas/2.jpeg" alt="testimonio2" class="user-image">
@@ -96,7 +102,6 @@
                         <span class="material-symbols-outlined">star</span>
                     </div>
                 </div>
-
     <!-- Review 3 -->
                 <div class="card-item swiper-slide">
                     <img src="static/images/reseñas/3.jpg" alt="testimonio3" class="user-image">
@@ -110,7 +115,6 @@
                         <span class="material-symbols-outlined">star</span>
                     </div>
                 </div>
-
     <!-- Review 4 -->
                 <div class="card-item swiper-slide">
                     <img src="static/images/reseñas/4.jpg" alt="testimonio4" class="user-image">
@@ -124,8 +128,7 @@
                         <span class="material-symbols-outlined">star</span>
                     </div>
                 </div>                
-
-    <!-- Review 35-->
+    <!-- Review 5-->
                 <div class="card-item swiper-slide">
                     <img src="static/images/reseñas/5.jpg" alt="testimonio1" class="user-image">
                     <h3 class="user-name">Michelle Vielma</h3>
@@ -139,13 +142,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="swiper-pagination"></div>
             <div class="swiper-slider-button swiper-button-prev"></div>
             <div class="swiper-slider-button swiper-button-next"></div>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="pie-pagina">
         <div class="grupo-1">
@@ -156,14 +157,11 @@
                     </a>
                 </figure>
             </div>
-
-
             <div class="box">
                 <h2>CONOCE MÁS</h2>
                 <p>Seguinos en nuestras redes sociales para conocer nuestras ofertas, promociones y novedades</p>
                 <p>¡No te lo pierdas y disfruta de los mejores productos directo a tu mesa!</p>
             </div>
-
             <div class="box">
                 <h2>SEGUINOS EN REDES SOCIALES</h2>
                 <div class="red-social">
@@ -176,9 +174,7 @@
             <p>&copy; 2024 Carnicería el Pana - Todos los Derechos Reservados</p>
         </div>
     </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="static/js/script.js"></script>
 </body>
-
 </html>

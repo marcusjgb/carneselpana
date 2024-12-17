@@ -146,7 +146,7 @@ section#description{
     display: flex;
     width: 300%;
     margin: 0;
-    animation: slide 15s infinite alternate ease-in-out;
+    animation: slide 20s infinite ease-in-out;
 }
 
 .slider li{
@@ -161,13 +161,15 @@ section#description{
 
 @keyframes slide{
     0% {margin-left: 0%;}
+    10% {margin-left: 0%;}
+    25% {margin-left: 0%;}
     35% {margin-left: 0%;}
-  
-    40% {margin-left: -100%;}
-    65% {margin-left: -100%;}
-
-    70% {margin-left: -200%;}
+    50% {margin-left: -100%;}
+    60% {margin-left: -100%;}
+    75% {margin-left: -100%;}
+    80% {margin-left: -200%;}
     95% {margin-left: -200%;}
+    100% {margin-left: -200%;}    
 }
 
 .main-title-ix {
@@ -304,6 +306,18 @@ section#description{
     flex-direction: column;
     align-items: center;
 }
+
+.product button {
+    padding: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #800020;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,transform 0.3s ease;
+}
+
+
 
 .product img {
     width: 100%; 
@@ -453,7 +467,7 @@ section#description{
 }
 
 .contact-form button {
-    width: 20%;
+    width: 25%;
     display: block;
     margin: 0 auto;
     padding: 12px;
@@ -555,10 +569,13 @@ section#description{
     background-color: white;
 }
 
-
+iframe{
+    width: 100%;
+    
+}
 
 /* MEDIAS QUERYS */
-                    /* ---Medium devices--- */
+/* ---Medium devices--- */
 @media(max-width:992px){
     /* Header */
 .navbar .links,
@@ -602,6 +619,12 @@ section#description{
     grid-gap: 30px;
     padding: 35px 0px;
 }
+iframe{
+    width: 100%;
+    
+}
+
+
 }
 
                  /* ---Minimum devices--- */
@@ -615,7 +638,7 @@ section#description{
 #description p{
         font-size: 15px;
 }
-    
+
     /* Menu hamburguesa desplegable */
 .dropdown_menu{
     width: auto;
@@ -633,7 +656,7 @@ section#description{
 
 /* Slider */
 .slider{
-    padding-top: 26%;
+    padding-top: 5%;
 }
 
 .pie-pagina .grupo-1 .box figure img{
@@ -705,4 +728,149 @@ section#description{
 .pie-pagina .grupo-1{
     padding-right: 20px;
 }
+iframe{
+    width: 100%;
+    
+}
+}
+
+/* Descripcion detallada del producto */
+.description{
+    display: none;
+}
+
+.description p{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;    
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#carritoBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #ff0000;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.producto img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.producto button {
+    margin: 0 10px;
+}
+
+.producto span {
+    font-size: 18px;
+}
+
+#mensajeVacio {
+    text-align: center;
+    color: #ff0000;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#productosCarrito, #productosDisponibles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#productosCarrito .producto, #productosDisponibles .producto {
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+#borrarCarrito, #enviarPedido {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+}
+
+#borrarCarrito:hover, #enviarPedido:hover {
+    background-color: #c82333;
+}
+
+#enviarPedido {
+    background-color: #28a745;
+}
+
+#enviarPedido:hover {
+    background-color: #218838;
 }
